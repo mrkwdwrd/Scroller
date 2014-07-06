@@ -1,0 +1,9 @@
+$(function () {
+    var s = $("#menu"),
+        t = $("#page, #parallax-placeholders");
+    return $("html").hasClass("ie-old") ? void s.hide() : (t.css("position", "absolute").css("top", 0).css("left", 0).css("right", 0).css("bottom", 0).css("z-index", 100).css("perspective", "1000px").css("-webkit-perspective", "1000px").css("-moz-perspective", "1000px").css("transform", "translate3d(0,0,0)").css("-webkit-transform", "translate3d(0,0,0)").css("-moz-transform", "translate3d(0,0,0)").css("-ms-transform", "translate3d(0,0,0)").css("-o-transform", "translate3d(0,0,0)").css("transition", "transform 0.3s").css("-webkit-transition", "-webkit-transform 0.3s").css("-moz-transition", "-moz-transform 0.3s").css("-o-transition", "-o-transform 0.3s").css("backface-visibility", "hidden").css("-webkit-backface-visibility", "hidden").css("user-select", "none").css("-webkit-user-select", "none").css("-moz-user-select", "none").css("-ms-user-select", "none").css("-webkit-user-drag", "none").css("-webkit-tap-highlight-color", "rgba(0,0,0,0)").css("box-shadow", "1px 0 0 rgba(0,0,0,0.2)"), s.css("position", "absolute").css("top", 0).css("left", 0).css("right", 0).css("bottom", 0).css("z-index", 99), $(".open-menu").on("click", function (s) {
+        return t.css("transform", "translate3d(-100%,0,0)").css("-webkit-transform", "translate3d(-100%,0,0)").css("-moz-transform", "translate3d(-100%,0,0)").css("-ms-transform", "translate3d(-100%,0,0)").css("-o-transform", "translate3d(-100%,0,0)"), s.stopPropagation(), s.preventDefault(), !1
+    }), void $(".close-menu").on("click", function (s) {
+        return t.css("transform", "translate3d(0,0,0)").css("-webkit-transform", "translate3d(0,0,0)").css("-moz-transform", "translate3d(0,0,0)").css("-ms-transform", "translate3d(0,0,0)").css("-o-transform", "translate3d(0,0,0)"), s.stopPropagation(), s.preventDefault(), !1
+    }))
+});
